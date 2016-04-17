@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sunlook">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-controller="firstController as vm">
+    <!-- <pre>{{vm|json}}</pre> -->
+    <div>style: {{vm.model.style}}</div>
+    <div>color:  {{vm.model.color}}</div>
+    <div>skirt: {{vm.model.skirt}}</div>
+    <div>sleeve: {{vm.model.sleeve}}</div>
+    <div>decollete{{vm.model.decolette}}</div>
+    <div>textile{{vm.model.textile}}</div>
+    <div>size{{vm.model.size}}</div>
+
+    <h3>Style</h3>
+    <div class="ctrl-group">
+    <label>
+      straight
+      <input type="radio" name="style" ng-model="vm.model.style" value="straight">
+    </label></br>
+    <label>
+      slip-over
+      <input type="radio" name="style" ng-model="vm.model.style" value="slipOver">
+    </label></br>
+    <label>
+      vStyle
+      <input type="radio" name="style" ng-model="vm.model.style" value="vStyle">
+    </label>
+    </div>
+  </div>
+  <script  src="node_modules/angular/angular.js"></script>
+  <script  src="app/app.js"></script>
+</body>
+</html>
