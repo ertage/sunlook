@@ -7,7 +7,7 @@
 <body>
   <div ng-controller="firstController as vm" ng-style="{'background-color': '#E0CFD2'}">
     <!-- <pre>{{vm|json}}</pre> -->
-    <div ng-style="{'background-color': 'red'}">style: {{vm.model.style}}</div>
+    <div ng-style="{'background-color': vm.styleColor[vm.model.style]}">style: {{vm.model.style}}</div>
     <div ng-style="{color: vm.model.color}">color:  {{vm.model.color}}</div>
     <div>skirt: {{vm.model.skirt}}</div>
     <div>sleeve: {{vm.model.sleeve}}</div>
@@ -39,11 +39,11 @@
         </label></br>
         <label>
           black
-          <input type="radio" name="style" ng-model="vm.model.color" value="black">
+          <input type="radio" name="color" ng-model="vm.model.color" value="black">
         </label></br>
         <label>
           white
-          <input type="radio" name="style" ng-model="vm.model.color" value="white">
+          <input type="radio" name="color" ng-model="vm.model.color" value="white">
         </label></br>
         <label>
           gray
@@ -51,11 +51,11 @@
         </label></br>
         <label>
           blue
-          <input type="radio" name="style" ng-model="vm.model.color" value="blue">
+          <input type="radio" name="color" ng-model="vm.model.color" value="blue">
         </label></br>
         <label>
           yellow
-          <input type="radio" name="style" ng-model="vm.model.color" value="yellow">
+          <input type="radio" name="color" ng-model="vm.model.color" value="yellow">
         </label></br>
         <label>
           burgundy
@@ -63,15 +63,15 @@
         </label></br>
         <label>
           green
-          <input type="radio" name="style" ng-model="vm.model.color" value="green">
+          <input type="radio" name="color" ng-model="vm.model.color" value="green">
         </label></br>
         <label>
-          light pink: 
-          <input type="radio" name="style" ng-model="vm.model.color" value="lightPink">
+          light pink:
+          <input type="radio" name="color" ng-model="vm.model.color" value="lightPink">
         </label></br>
         <label>
           lignt blue:
-          <input type="radio" name="style" ng-model="vm.model.color" value="lightBlue">
+          <input type="radio" name="color" ng-model="vm.model.color" value="lightBlue">
         </label>
       </div>
 
@@ -79,23 +79,23 @@
       <div class="ctrl-group">
         <label>
           skirt type 1
-          <input type="radio" name="style" ng-model="vm.model.skirt" value="skirt type 1" >
+          <input type="radio" name="skirt" ng-model="vm.model.skirt" value="skirt type 1" >
         </label></br>
         <label>
           skirt type 2
-          <input type="radio" name="style" ng-model="vm.model.skirt" value="skirt type 2">
+          <input type="radio" name="skirt" ng-model="vm.model.skirt" value="skirt type 2">
         </label></br>
         <label>
           skirt type 3
-          <input type="radio" name="style" ng-model="vm.model.skirt" value="skirt type 3">
+          <input type="radio" name="skirt" ng-model="vm.model.skirt" value="skirt type 3">
         </label></br>
         <label>
           skirt type 4
-          <input type="radio" name="style" ng-model="vm.model.skirt" value="skirt type 4">
+          <input type="radio" name="skirt" ng-model="vm.model.skirt" value="skirt type 4">
         </label></br>
          <label>
           skirt type 5
-          <input type="radio" name="style" ng-model="vm.model.skirt" value="skirt type 5">
+          <input type="radio" name="skirt" ng-model="vm.model.skirt" value="skirt type 5">
         </label></br>
       </div>
     </div>
@@ -163,7 +163,7 @@
           chiffon
           <input type="radio" name="textile" ng-model="vm.model.textile" value="chiffon">
         </label></br>
-        <label>         
+        <label>
           jacquard
           <input type="radio" name="textile" ng-model="vm.model.textile" value="jacquard">
         </label></br>
@@ -175,18 +175,18 @@
       <h3>size</h3>
       <div class="ctrl-group">
         <label>
-          XS: 
+          XS:
           <input type="radio" name="size" ng-model="vm.model.size" value="XS" >
         </label></br>
         <label>
-          S: 
+          S:
           <input type="radio" name="size" ng-model="vm.model.size" value="S">
         </label></br>
         <label>
-          M: 
+          M:
           <input type="radio" name="size" ng-model="vm.model.size" value="M">
         </label></br>
-        <label>         
+        <label>
           L:
           <input type="radio" name="size" ng-model="vm.model.size" value="L">
         </label></br>
