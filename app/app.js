@@ -4,10 +4,10 @@ angular.module('sunlook', [])
     this.model = {
       style: "straight",
       color: "red",
-      skirt: "1",
-      sleeve: "1",
-      decollete: "1",
+      skirt: "skirt type 1",
+      sleeve: "sleeve type 1",
+      decollete: "decollete type 1",
       textile: "silk",
-      size: "s"
+      size: "XS"
     };
   })

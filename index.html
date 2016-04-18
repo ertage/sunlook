@@ -5,30 +5,196 @@
   <title>Document</title>
 </head>
 <body>
-  <div ng-controller="firstController as vm">
+  <div ng-controller="firstController as vm" ng-style="{'background-color': '#E0CFD2'}">
     <!-- <pre>{{vm|json}}</pre> -->
-    <div>style: {{vm.model.style}}</div>
-    <div>color:  {{vm.model.color}}</div>
+    <div ng-style="{'background-color': 'red'}">style: {{vm.model.style}}</div>
+    <div ng-style="{color: vm.model.color}">color:  {{vm.model.color}}</div>
     <div>skirt: {{vm.model.skirt}}</div>
     <div>sleeve: {{vm.model.sleeve}}</div>
-    <div>decollete{{vm.model.decolette}}</div>
-    <div>textile{{vm.model.textile}}</div>
-    <div>size{{vm.model.size}}</div>
+    <div>decollete: {{vm.model.decollete}}</div>
+    <div>textile: {{vm.model.textile}}</div>
+    <div>size: {{vm.model.size}}</div>
+    <div style="float: left; padding: 16px;">
+      <h3>Style</h3>
+      <div class="ctrl-group">
+        <label>
+          straight
+          <input type="radio" name="style" ng-model="vm.model.style" value="straight" >
+        </label></br>
+        <label>
+          slip-over
+          <input type="radio" name="style" ng-model="vm.model.style" value="slipOver">
+        </label></br>
+        <label>
+          vStyle
+          <input type="radio" name="style" ng-model="vm.model.style" value="vStyle">
+        </label>
+      </div>
 
-    <h3>Style</h3>
-    <div class="ctrl-group">
-    <label>
-      straight
-      <input type="radio" name="style" ng-model="vm.model.style" value="straight">
-    </label></br>
-    <label>
-      slip-over
-      <input type="radio" name="style" ng-model="vm.model.style" value="slipOver">
-    </label></br>
-    <label>
-      vStyle
-      <input type="radio" name="style" ng-model="vm.model.style" value="vStyle">
-    </label>
+      <h3>Color</h3>
+      <div class="ctrl-group">
+        <label>
+          red
+          <input type="radio" name="color" ng-model="vm.model.color" value="red">
+        </label></br>
+        <label>
+          black
+          <input type="radio" name="style" ng-model="vm.model.color" value="black">
+        </label></br>
+        <label>
+          white
+          <input type="radio" name="style" ng-model="vm.model.color" value="white">
+        </label></br>
+        <label>
+          gray
+          <input type="radio" name="color" ng-model="vm.model.color" value="gray">
+        </label></br>
+        <label>
+          blue
+          <input type="radio" name="style" ng-model="vm.model.color" value="blue">
+        </label></br>
+        <label>
+          yellow
+          <input type="radio" name="style" ng-model="vm.model.color" value="yellow">
+        </label></br>
+        <label>
+          burgundy
+          <input type="radio" name="color" ng-model="vm.model.color" value="#551925">
+        </label></br>
+        <label>
+          green
+          <input type="radio" name="style" ng-model="vm.model.color" value="green">
+        </label></br>
+        <label>
+          light pink: 
+          <input type="radio" name="style" ng-model="vm.model.color" value="lightPink">
+        </label></br>
+        <label>
+          lignt blue:
+          <input type="radio" name="style" ng-model="vm.model.color" value="lightBlue">
+        </label>
+      </div>
+
+      <h3>skirt</h3>
+      <div class="ctrl-group">
+        <label>
+          skirt type 1
+          <input type="radio" name="style" ng-model="vm.model.skirt" value="skirt type 1" >
+        </label></br>
+        <label>
+          skirt type 2
+          <input type="radio" name="style" ng-model="vm.model.skirt" value="skirt type 2">
+        </label></br>
+        <label>
+          skirt type 3
+          <input type="radio" name="style" ng-model="vm.model.skirt" value="skirt type 3">
+        </label></br>
+        <label>
+          skirt type 4
+          <input type="radio" name="style" ng-model="vm.model.skirt" value="skirt type 4">
+        </label></br>
+         <label>
+          skirt type 5
+          <input type="radio" name="style" ng-model="vm.model.skirt" value="skirt type 5">
+        </label></br>
+      </div>
+    </div>
+    <div style="float: left; padding: 16px;">
+      <h3>sleeve</h3>
+      <div class="ctrl-group">
+        <label>
+          sleeve type 1
+          <input type="radio" name="sleeve" ng-model="vm.model.sleeve" value="sleeve type 1" >
+        </label></br>
+        <label>
+          sleeve type 2
+          <input type="radio" name="sleeve" ng-model="vm.model.sleeve" value="sleeve type 2">
+        </label></br>
+        <label>
+          sleeve type 3
+          <input type="radio" name="sleeve" ng-model="vm.model.sleeve" value="sleeve type 3">
+        </label></br>
+        <label>
+          sleeve type sleeve
+          <input type="radio" name="sleeve" ng-model="vm.model.sleeve" value="sleeve type 4">
+        </label></br>
+         <label>
+          sleeve type 5
+          <input type="radio" name="sleeve" ng-model="vm.model.sleeve" value="sleeve type 5">
+        </label></br>
+      </div>
+
+      <h3>decollete</h3>
+      <div class="ctrl-group">
+        <label>
+          decollete type 1
+          <input type="radio" name="decollete" ng-model="vm.model.decollete" value="decollete type 1" >
+        </label></br>
+        <label>
+          decollete type 2
+          <input type="radio" name="decollete" ng-model="vm.model.decollete" value="decollete type 2">
+        </label></br>
+        <label>
+          decollete type 3
+          <input type="radio" name="decollete" ng-model="vm.model.decollete" value="decollete type 3">
+        </label></br>
+        <label>
+          decollete type 4
+          <input type="radio" name="decollete" ng-model="vm.model.decollete" value="decollete type 4">
+        </label></br>
+         <label>
+          decollete type 5
+          <input type="radio" name="decollete" ng-model="vm.model.decollete" value="decollete type 5">
+        </label></br>
+      </div>
+    </div>
+    <div style="float: left; padding: 16px;">
+      <h3>textile</h3>
+      <div class="ctrl-group">
+        <label>
+          silk
+          <input type="radio" name="textile" ng-model="vm.model.textile" value="silk" >
+        </label></br>
+        <label>
+          cotton
+          <input type="radio" name="textile" ng-model="vm.model.textile" value="cotton">
+        </label></br>
+        <label>
+          chiffon
+          <input type="radio" name="textile" ng-model="vm.model.textile" value="chiffon">
+        </label></br>
+        <label>         
+          jacquard
+          <input type="radio" name="textile" ng-model="vm.model.textile" value="jacquard">
+        </label></br>
+         <label>
+          JERSEY "FRENCH"
+          <input type="radio" name="textile" ng-model="vm.model.textile" value="JERSEY 'FRENCH'">
+        </label></br>
+      </div>
+      <h3>size</h3>
+      <div class="ctrl-group">
+        <label>
+          XS: 
+          <input type="radio" name="size" ng-model="vm.model.size" value="XS" >
+        </label></br>
+        <label>
+          S: 
+          <input type="radio" name="size" ng-model="vm.model.size" value="S">
+        </label></br>
+        <label>
+          M: 
+          <input type="radio" name="size" ng-model="vm.model.size" value="M">
+        </label></br>
+        <label>         
+          L:
+          <input type="radio" name="size" ng-model="vm.model.size" value="L">
+        </label></br>
+         <label>
+          XL
+          <input type="radio" name="size" ng-model="vm.model.size" value="XL">
+        </label></br>
+      </div>
     </div>
   </div>
   <script  src="node_modules/angular/angular.js"></script>
