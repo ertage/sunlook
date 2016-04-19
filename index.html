@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" href="app/style.css">
 </head>
 <body>
   <div ng-controller="firstController as vm" ng-style="{'background-color': '#E0CFD2'}">
     <!-- <pre>{{vm|json}}</pre> -->
-    <div ng-style="{'background-color': vm.styleColor[vm.model.style]}">style: {{vm.model.style}}</div>
+    <div ng-style="{'background-color': vm.model.style.bgColor}">style: {{vm.model.style.title}}</div>
     <div ng-style="{color: vm.model.color}">color:  {{vm.model.color}}</div>
     <div>skirt: {{vm.model.skirt}}</div>
     <div>sleeve: {{vm.model.sleeve}}</div>
@@ -16,8 +17,8 @@
     <div>size: {{vm.model.size}}</div>
     <div style="float: left; padding: 16px;">
       <h3>Style</h3>
-      <div class="ctrl-group">
-        <label>
+      <div class="ctrl-group" ng-repeat="style in vm.styles">
+        <!-- <label>
           straight
           <input type="radio" name="style" ng-model="vm.model.style" value="straight" >
         </label></br>
@@ -28,7 +29,10 @@
         <label>
           vStyle
           <input type="radio" name="style" ng-model="vm.model.style" value="vStyle">
-        </label>
+        </label> -->
+        <div class="ctrl-group__item" ng-click="vm.model.style = style">
+          <img ng-src="{{style.image}}" alt="">
+        </div>
       </div>
 
       <h3>Color</h3>
