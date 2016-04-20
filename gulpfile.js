@@ -4,7 +4,9 @@ var gulp = require('gulp'),
 	stylus = require('gulp-stylus'),
 	autoprefixer = require('gulp-autoprefixer'),
 	livereload = require('gulp-livereload'),
-	webserver = require('gulp-webserver');
+	webserver = require('gulp-webserver'),
+	cssmin = require('gulp-cssmin'),
+	rename = require('gulp-rename');
 
 livereload({ start: true })
 
@@ -25,7 +27,10 @@ gulp.task('styles', function () {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
+    .pipe(cssmin())
     .pipe(gulp.dest('./dist/css'))
+    .pipe(rename({suffix: '.min'}))
+	.pipe(gulp.dest('./dist/css'))
     .pipe(livereload());
 });
 

@@ -1,5 +1,58 @@
-.header
-	background-color: #555
-	width: 100%
-	padding: 16px
 
+.header
+	background-color: $color_darkgrey
+	width: 100%
+
+.header-overlay
+	position: relative
+	text-align: center
+	
+.header-overlay__img
+	width: 100%
+	height: auto
+	
+.header-overlay__info
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	
+.header-overlay__title
+	color: $color_white
+	font-family: $font_primary
+	font-size: 26px
+	margin-bottom: 24px
+	margin-top: 0
+	line-height: 32px
+	
+.header-nav
+	background-color: $color_black
+	
+.header__container
+	min-width: $min_width
+	max-width: $max_width 
+	margin: 0 auto
+	padding: 12px 0
+	text-align: right
+	position: relative
+	
+.header__logo
+	position: absolute
+	top: 50%
+	left: 24px
+	transform: translateY(-50%)
+	
+.header-menu
+	display: inline-block
+	li
+		display: inline-block
+		vertical-align: middle
+	
+.header-menu__item
+	color: $color_white
+	text-transform: uppercase
+	margin: 0 24px
+	display: inline-block
+	text-decoration: none
+	font-size: 18px
+	
