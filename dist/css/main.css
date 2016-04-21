@@ -1,1 +1,336 @@
-progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}.header-overlay,body,sub,sup{position:relative}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0}.button,.header-menu li{vertical-align:middle}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,select{text-transform:none}.block-info__title,.button,.header-menu__item{text-transform:uppercase}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{color:inherit;display:table;max-width:100%;white-space:normal}.button,.header-menu,.header-menu li,.header-menu__item{display:inline-block}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}.button{margin-bottom:0;font-weight:400;text-align:center;cursor:pointer;background-image:none;background-color:#e8bc5e;color:#fff;padding:16px 58px;font-size:14px;font-family:'Futura PT Book';white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;outline:0;border:none}.button:hover{background-color:#edd49d}.button:active{background-color:#e6bd64}body,html{margin:0;padding:0;width:100%;height:100%}body{margin:0;min-height:100%;height:auto!important;height:100%;font-size:18px;font-family:FuturaLight;color:$Color_Black_07;line-height:24px;min-width:$minWidth}.container{padding:80px 0;min-width:750px;max-width:1280px;margin:0 auto}.block-info{max-width:768px;margin:0 auto}.block-info__title{font-size:36px;line-height:48px;color:color_black;text-align:center}.block-info__text{font-size:18px;line-height:24px;color:grey;margin-top:24px;text-align:center}.header{background-color:#262626;width:100%}.header-overlay{text-align:center}.header-overlay__img{width:100%;height:auto}.header-overlay__info{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.header-overlay__title{color:#fff;font-family:'Futura PT Book';font-size:26px;margin-bottom:24px;margin-top:0;line-height:32px}.header-nav{background-color:#000}.header__container{min-width:750px;max-width:1280px;margin:0 auto;padding:12px 0;text-align:right;position:relative}.header__logo{position:absolute;top:50%;left:24px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.header-menu__item{color:#fff;margin:0 24px;text-decoration:none;font-size:18px}
+/* normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+/* 1 */
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+progress {
+  vertical-align: baseline;
+}
+template,
+[hidden] {
+  display: none;
+}
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+a:active,
+a:hover {
+  outline-width: 0;
+}
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+b,
+strong {
+  font-weight: inherit;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+button,
+input,
+select,
+textarea {
+  font: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+optgroup {
+  font-weight: bold;
+}
+button,
+input {
+/* 1 */
+  overflow: visible;
+}
+button,
+select {
+/* 1 */
+  text-transform: none;
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+.button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  background-color: #e8bc5e;
+  color: #fff;
+  padding: 16px 58px;
+  font-size: 14px;
+  font-family: 'Futura PT Book';
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+}
+.button:hover {
+  background-color: #edd49d;
+}
+.button:active {
+  background-color: #e6bd64;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  position: relative;
+  font-size: 18px;
+  font-family: 'FuturaLight';
+  color: $Color_Black_07;
+  line-height: 24px;
+  min-width: $minWidth;
+}
+.container {
+  padding: 80px 0;
+  min-width: 750px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.block-info {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.block-info__title {
+  font-size: 36px;
+  line-height: 48px;
+  color: color_black;
+  text-align: center;
+  text-transform: uppercase;
+}
+.block-info__text {
+  font-size: 18px;
+  line-height: 24px;
+  color: #808080;
+  margin-top: 24px;
+  text-align: center;
+}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+.grid-item {
+  float: left;
+}
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+.header {
+  background-color: #262626;
+  width: 100%;
+}
+.header-overlay {
+  position: relative;
+  text-align: center;
+}
+.header-overlay__img {
+  width: 100%;
+  height: auto;
+}
+.header-overlay__info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.header-overlay__title {
+  color: #fff;
+  font-family: 'Futura PT Book';
+  font-size: 26px;
+  margin-bottom: 24px;
+  margin-top: 0;
+  line-height: 32px;
+}
+.header-nav {
+  background-color: #000;
+}
+.header__container {
+  min-width: 750px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 0;
+  text-align: right;
+  position: relative;
+}
+.header__logo {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.header-menu {
+  display: inline-block;
+}
+.header-menu li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header-menu__item {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 24px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+}

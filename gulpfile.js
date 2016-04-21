@@ -19,7 +19,7 @@ livereload({ start: true })
 // 		.pipe(gulp.dest('dist'));
 // })
 
-// Get one .styl file and render 
+// Get one .styl file and render
 gulp.task('styles', function () {
   return gulp.src('./src/stylus/main.styl')
     .pipe(stylus())
@@ -27,10 +27,10 @@ gulp.task('styles', function () {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-    .pipe(cssmin())
     .pipe(gulp.dest('./dist/css'))
+    .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
-	.pipe(gulp.dest('./dist/css'))
+	  .pipe(gulp.dest('./dist/css'))
     .pipe(livereload());
 });
 
@@ -49,4 +49,4 @@ gulp.task('webserver', function() {
     }));
 });
 
-gulp.task('default', ['styles','watch', 'webserver']);
+gulp.task('default', ['styles', 'watch', 'webserver']);

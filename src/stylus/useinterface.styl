@@ -17,25 +17,42 @@ body
 	min-width: $minWidth
 
 .container
-	padding: 80px 0 
+	padding: 80px 0
 	min-width: $min_width
-	max-width: $max_width 
+	max-width: $max_width
 	margin: 0 auto
-	
+
 .block-info
 	max-width: 768px
 	margin: 0 auto
-	
+
 .block-info__title
 	font-size: 36px
 	line-height: 48px
 	color: color_black
 	text-align: center
 	text-transform: uppercase
-	
+
 .block-info__text
 	font-size: 18px
 	line-height: 24px
 	color: $color_grey
 	margin-top: 24px
 	text-align: center
+
+.grid
+	&:after
+		content: ''
+		display: block
+		clear: both
+
+.grid-sizer,
+.grid-item
+	width: 33.333%
+
+.grid-item
+	float: left
+
+.grid-item img
+	display: block
+	max-width: 100%

@@ -8,10 +8,17 @@
 </head>
 <body>
   <div ng-include="'src/app/main/header.tpl.html'"></div>
-  <div ng-include="'src/app/main/application.tpl.html'"></div>
+  <div ng-include="'src/app/main/content.tpl.html'"></div>
+  <div ng-include="'src/app/main/constructor.tpl.html'"></div>
   <div ng-include="'src/app/main/footer.tpl.html'"></div>
-  <script  src="node_modules/angular/angular.js"></script>
+
+  <script src="node_modules/angular/angular.js"></script>
+
+  <script src="node_modules/masonry-layout/dist/masonry.pkgd.min.js"></script>
+  <script src="node_modules/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script  src="src/app/app.module.js"></script>
-  <script  src="src/app/main/application.controller.js"></script>
+  <script  src="src/app/main/constructor.controller.js"></script>
+  <script  src="src/app/gallery/gallery.directive.js"></script>
+
 </body>
 </html>

@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.5.3"
+    "angular": "^1.5.3",
+    "imagesloaded": "^4.1.0",
+    "masonry-layout": "^4.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
