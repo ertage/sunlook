@@ -8,7 +8,7 @@
   background-image: none;
   background-color: #e8bc5e;
   color: #fff;
-  padding: 16px 58px;
+  padding: 8px 40px;
   font-size: 14px;
   font-family: 'Futura PT Book';
   white-space: nowrap;
@@ -46,6 +46,7 @@ body {
   color: $Color_Black_07;
   line-height: 24px;
   min-width: 750px;
+  color: #4c4c4c;
 }
 .content {
   padding: 88px 56px;
@@ -70,6 +71,7 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto;
+  position: relative;
 }
 .block-info {
   max-width: 768px;
@@ -135,6 +137,42 @@ body {
 .author__img {
   width: 100%;
 }
+.contact-form-title {
+  font-family: 'FuturaLight';
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 400;
+}
+.input,
+.textarea {
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  padding: 16px 0;
+}
+.input::-moz-placeholder,
+.textarea::-moz-placeholder,
+.input::-webkit-input-placeholder,
+.textarea::-webkit-input-placeholder,
+.input:-moz-placeholder,
+.textarea:-moz-placeholder,
+.input:-ms-input-placeholder,
+.textarea:-ms-input-placeholder {
+  font-size: 18px !important;
+  color: $Color_Black_03 !important;
+}
+.input:focus,
+.textarea:focus {
+  border-bottom-color: #808080;
+  outline: none;
+}
+input:-ms-input-placeholder {
+  font-size: 18px !important;
+  color: $Color_Black_03 !important;
+}
+.contact-form__button {
+  margin-top: 40px;
+}
 .header {
   background-color: #262626;
   width: 100%;
@@ -164,21 +202,17 @@ body {
 }
 .header-nav {
   background-color: #000;
-}
-.header__container {
-  min-width: 750px;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 12px 0;
   text-align: right;
-  position: relative;
+  padding: 12px 0;
 }
-.header__logo {
+.logo {
   position: absolute;
   top: 50%;
-  left: 24px;
+  left: 0;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  color: #b2b2b2;
+  font-size: 28px;
 }
 .header-menu {
   display: inline-block;
@@ -214,4 +248,25 @@ body {
 .grid-item img {
   display: block;
   max-width: 100%;
+}
+.footer {
+  padding: 0 56px;
+  font-family: 'FuturaLight';
+  font-siZe: 18px;
+  text-align: right;
+  position: relative;
+}
+.footer .container {
+  border-top: 1px solid #e5e5e5;
+  padding: 24px 0;
+}
+.footer__text {
+  display: inline-block;
+}
+.header__logo {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }

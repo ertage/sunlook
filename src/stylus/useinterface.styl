@@ -18,6 +18,7 @@ body
 	color: $Color_Black_07
 	line-height: 24px
 	min-width: $min_width
+	color: $color_body
 
 .content
 	padding: 88px 56px
@@ -41,7 +42,8 @@ body
 .container
 	max-width: $max_width
 	margin: 0 auto
-
+	position: relative
+	
 .block-info
 	max-width: 768px
 	margin: 0 auto
@@ -108,3 +110,33 @@ body
 	width: 100%
 	
 
+.contact-form-title
+	font-family: $font_additional1_1
+	font-size: 36px
+	line-height: 48px
+	font-weight: 400
+	
+.input,
+.textarea
+	border: none
+	border-bottom: 1px solid $color_lightfray
+	width: 100%
+	padding: 16px 0
+
+	&::-moz-placeholder,
+	&::-webkit-input-placeholder,
+	&:-moz-placeholder,
+	&:-ms-input-placeholder
+		font-size: 18px !important
+		color: $Color_Black_03 !important
+
+	&:focus
+		border-bottom-color: $color_grey
+		outline: none
+	
+input:-ms-input-placeholder 
+	font-size: 18px !important
+	color: $Color_Black_03 !important
+	
+.contact-form__button
+	margin-top: 40px
