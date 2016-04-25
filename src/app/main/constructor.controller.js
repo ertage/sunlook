@@ -14,19 +14,19 @@
 		        type: 'straight',
 		        bgColor: '#f00',
 		        title: 'Straight',
-		        image:  'app/images/style/straight.jpg'
+		        image:  '/src/images/style/straight.jpg'
 		      },
 		      {
 		        type: 'slipOver',
 		        bgColor: 'blue',
 		        title: 'slipOver',
-		        image: 'app/images/style/slip-over.jpg'
+		        image: '/src/images/style/slip-over.jpg'
 		      },
 		      {
 		        type: 'vStyle',
 		        bgColor: 'pink',
 		        title: 'slipOver',
-		        image: 'app/images/style/slip-over.jpg'
+		        image: '/src/images/style/slip-over.jpg'
 		      }
 		    ];
 		    vm.model = {
@@ -38,7 +38,11 @@
 		      textile: 'silk',
 		      size: 'XS'
 		    };
-		    // var color = this.styleColor[this.model.style];
+		   	vm.modalOpen = false;
+		    vm.showModal = function() {
+		     	vm.modalOpen = !vm.modalOpen;
+			}
 		 });
 
+	
 })();

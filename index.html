@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="dist/css/main.min.css">
   <link rel="stylesheet" href="src/css-fonts/fonts.css">
 </head>
-<body>
+<body ng-class="{open: vm.modalOpen}" ng-controller="AppController as vm">
   <div ng-include="'src/app/main/header.tpl.html'"></div>
   <div ng-include="'src/app/main/content.tpl.html'"></div>
-  <!-- <div ng-include="'src/app/main/constructor.tpl.html'"></div> -->
+  <div ng-include="'src/app/main/constructor.tpl.html'"></div> 
   <div ng-include="'src/app/main/footer.tpl.html'"></div>
 
   <script src="node_modules/angular/angular.js"></script>
