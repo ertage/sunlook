@@ -1,3 +1,6 @@
+*
+	box-sizing: border-box
+	
 html, body
 	margin: 0
 	padding: 0
@@ -11,14 +14,31 @@ body
 	height: 100%
 	position: relative
 	font-size: 18px
-	font-family: $font_additional1_1
+	font-family: $font_primary
 	color: $Color_Black_07
 	line-height: 24px
-	min-width: $minWidth
-
-.container
-	padding: 80px 0
 	min-width: $min_width
+
+.content
+	padding: 88px 56px
+	
+	&.content_type_image
+		background: url('../../src/images/bg1.jpg') center no-repeat
+		
+		.block-info__text
+			color: $color_white
+		
+	&.content_type_color
+		background: url('../../src/images/bg2.jpg') center no-repeat
+		
+	&.content_type_color,
+	&.content_type_image
+		background-size: cover
+		
+		.block-info__text
+			color: $color_white
+		
+.container
 	max-width: $max_width
 	margin: 0 auto
 
@@ -29,9 +49,14 @@ body
 .block-info__title
 	font-size: 36px
 	line-height: 48px
-	color: color_black
+	color: $color_black
 	text-align: center
 	text-transform: uppercase
+	margin-top: 0
+	font-family: $font_additional1_1
+	
+	&.title_type_color
+		color: $color_lightyellow
 
 .block-info__text
 	font-size: 18px
@@ -39,20 +64,47 @@ body
 	color: $color_grey
 	margin-top: 24px
 	text-align: center
+	font-family: $font_additional1_1
 
-.grid
-	&:after
-		content: ''
-		display: block
-		clear: both
 
-.grid-sizer,
-.grid-item
-	width: 33.333%
-
-.grid-item
+.block-info__button
+	margin: 32px auto 0
+	text-align: center
+	
+.list,
+.columns
+	margin-left: -72px
+	font-size: 0
+	
+.list__item
+	padding-left: 72px
+	display: inline-block
+	width: 25%
+	font-size: 14px
+	color: $color_white
+	
+.list__icon
 	float: left
+	
+.list__body
+	overflow: hidden
+	
+.list__title
+	font-family: $font_additional1_2 
+	font-size: 16px
+	
+.columns__item
+	width: 50%
+	padding-left: 72px
+	display: inline-block
+	vertical-align: top
+	font-size: 18px
+	line-height: 28px
+	
+.author__bg
+	margin: 54px 0
+	
+.author__img
+	width: 100%
+	
 
-.grid-item img
-	display: block
-	max-width: 100%

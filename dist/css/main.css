@@ -1,193 +1,3 @@
-/* normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
-html {
-  font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-body {
-  margin: 0;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-/* 1 */
-  display: block;
-}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-progress {
-  vertical-align: baseline;
-}
-template,
-[hidden] {
-  display: none;
-}
-a {
-  background-color: transparent; /* 1 */
-  -webkit-text-decoration-skip: objects; /* 2 */
-}
-a:active,
-a:hover {
-  outline-width: 0;
-}
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
-b,
-strong {
-  font-weight: inherit;
-}
-b,
-strong {
-  font-weight: bolder;
-}
-dfn {
-  font-style: italic;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
-img {
-  border-style: none;
-}
-svg:not(:root) {
-  overflow: hidden;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-figure {
-  margin: 1em 40px;
-}
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-button,
-input,
-select,
-textarea {
-  font: inherit; /* 1 */
-  margin: 0; /* 2 */
-}
-optgroup {
-  font-weight: bold;
-}
-button,
-input {
-/* 1 */
-  overflow: visible;
-}
-button,
-select {
-/* 1 */
-  text-transform: none;
-}
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-}
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
-textarea {
-  overflow: auto;
-}
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
 .button {
   display: inline-block;
   margin-bottom: 0;
@@ -211,10 +21,13 @@ textarea {
   text-transform: uppercase;
 }
 .button:hover {
-  background-color: #edd49d;
+  background-color: #fad484;
 }
 .button:active {
   background-color: #e6bd64;
+}
+* {
+  box-sizing: border-box;
 }
 html,
 body {
@@ -229,14 +42,32 @@ body {
   height: 100%;
   position: relative;
   font-size: 18px;
-  font-family: 'FuturaLight';
+  font-family: 'Futura PT Book';
   color: $Color_Black_07;
   line-height: 24px;
-  min-width: $minWidth;
+  min-width: 750px;
+}
+.content {
+  padding: 88px 56px;
+}
+.content.content_type_image {
+  background: url("../../src/images/bg1.jpg") center no-repeat;
+}
+.content.content_type_image .block-info__text {
+  color: #fff;
+}
+.content.content_type_color {
+  background: url("../../src/images/bg2.jpg") center no-repeat;
+}
+.content.content_type_color,
+.content.content_type_image {
+  background-size: cover;
+}
+.content.content_type_color .block-info__text,
+.content.content_type_image .block-info__text {
+  color: #fff;
 }
 .container {
-  padding: 80px 0;
-  min-width: 750px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -247,9 +78,14 @@ body {
 .block-info__title {
   font-size: 36px;
   line-height: 48px;
-  color: color_black;
+  color: #000;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 0;
+  font-family: 'FuturaLight';
+}
+.block-info__title.title_type_color {
+  color: #fad484;
 }
 .block-info__text {
   font-size: 18px;
@@ -257,22 +93,47 @@ body {
   color: #808080;
   margin-top: 24px;
   text-align: center;
+  font-family: 'FuturaLight';
 }
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
+.block-info__button {
+  margin: 32px auto 0;
+  text-align: center;
 }
-.grid-sizer,
-.grid-item {
-  width: 33.333%;
+.list,
+.columns {
+  margin-left: -72px;
+  font-size: 0;
 }
-.grid-item {
+.list__item {
+  padding-left: 72px;
+  display: inline-block;
+  width: 25%;
+  font-size: 14px;
+  color: #fff;
+}
+.list__icon {
   float: left;
 }
-.grid-item img {
-  display: block;
-  max-width: 100%;
+.list__body {
+  overflow: hidden;
+}
+.list__title {
+  font-family: 'FuturaPTW01Medium';
+  font-size: 16px;
+}
+.columns__item {
+  width: 50%;
+  padding-left: 72px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 18px;
+  line-height: 28px;
+}
+.author__bg {
+  margin: 54px 0;
+}
+.author__img {
+  width: 100%;
 }
 .header {
   background-color: #262626;
@@ -333,4 +194,24 @@ body {
   display: inline-block;
   text-decoration: none;
   font-size: 18px;
+}
+.gallery {
+  margin: 56px 0;
+  display: block;
+}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+.grid-item {
+  float: left;
+}
+.grid-item img {
+  display: block;
+  max-width: 100%;
 }
