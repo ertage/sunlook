@@ -1,8 +1,39 @@
 <div class="modal-holder">
   <div class="modal">
-    <div  class="modal-body" ng-style="{'background-color': '#E0CFD2'}">
+    <div class="modal__header">
+      <button type="button" class="modal__close" ng-click="vm.closeModal()">
+        <span class="modal__icon">+</span>
+      </button>
+      <div class="modal__title">
+        Constructor
+      </div>
+    </div>
+    <div  class="modal__body">
+      <ul class="modal__sidebar">
+        <li class="modal__sidebar-item" ng-class="{active: vm.isActive}"  ng-click="vm.isActive(1)">Style</li>
+        <li class="modal__sidebar-item" ng-class="{active: vm.isActive}"  ng-click="vm.isActive(2)">Textile</li>
+        <li class="modal__sidebar-item" ng-class="{active: vm.isActive}"  ng-click="vm.isActive(3)">Decollete</li>
+        <li class="modal__sidebar-item" ng-class="{active: vm.isActive}"  ng-click="vm.isActive(4)">Skirt</li>
+        <li class="modal__sidebar-item" ng-class="{active: vm.isActive}"  ng-click="vm.isActive(5)">Sleeve</li>
+      </ul>
+      <div class="modal__content">
+        <div class="model-overlay">
+          <div class="model"></div>
+        </div>
+        <div class="model-contrller">
+          <ul class="tabs">
+            <li class="tabs__item">I know my size</li>
+            <li class="tabs__item">I don't know my size</li>
+          </ul>
+          <div class="tabs-content">
+            <div class="tabs-content__item"></div>
+            <div class="tabs-content__item"></div>
+          </div>
+        </div>
+      </div>
       <!-- <pre>{{vm|json}}</pre> -->
-      <div ng-style="{'background-color': vm.model.style.bgColor}">style: {{vm.model.style.title}}</div>
+     <!--  <div ng-style="{'background-color': vm.model.style.bgColor}">
+        style: {{vm.model.style.title}}</div>
       <div ng-style="{color: vm.model.color}">color:  {{vm.model.color}}</div>
       <div>skirt: {{vm.model.skirt}}</div>
       <div>sleeve: {{vm.model.sleeve}}</div>
@@ -182,7 +213,7 @@
             <input type="radio" name="size" ng-model="vm.model.size" value="XL">
           </label></br>
         </div>
-      </div>
+      </div> -->
     </div>
    </div>
 </div>

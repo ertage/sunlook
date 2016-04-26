@@ -13,11 +13,107 @@ body.open
 	display: none
 	
 .modal
-	width: 996px
+	width: $model_width 
 	margin: 80px auto
-	background-color: $color_white
 	overflow-y: auto
 	overflow-x: hidden
 	
-.modal-body
+	
+.modal__header
+	position: relative
+	overflow: hidden
+	padding: 16px 24px
+	border-bottom: 1px solid $color_lightfray
+	color: $color_black
+	font-family: $font_additional1_1	
 	background-color: $color_white
+	
+.modal__close
+	position: absolute
+	right: 24px
+	top: 50%
+	transform: translateY(-50%)
+	font-size: 48px
+	border: none
+	background: none
+	cursor: pointer
+	&:focus,
+	&:hover,
+	&:active
+		outline: none
+		border: none
+		background: none
+		
+.modal__icon
+	display: inline-block;
+	transform: rotate(45deg)
+	
+.modal__title
+	font-size: 28px
+	line-height: 48px
+	
+.modal__body
+	font-size: 0
+	position: relative
+	
+.modal__sidebar
+	width: 170px
+	font-size: 20px
+	list-style-type: none
+	background-color: $color_bggrey
+	display: inline-block
+	vertical-align: top
+	margin: 0
+	padding: 0
+	
+	
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		background-color: $color_bggrey
+		width: 170px
+		z-index: -1
+	
+.modal__sidebar-item
+	padding: 16px 32px
+	color: $color_black
+	border-bottom: 1px solid $color_lightfray
+	cursor: pointer
+	
+	&.active
+		background-color: $color_black
+		color: $color_white
+	
+.modal__content
+	width: $model_width - 170px
+	display: inline-block
+	vertical-align: top
+	background-color: $color_white
+	
+.model-overlay
+	width: 100%
+	height: 700px
+	background: url('../../src/images/model-bg.jpg') center no-repeat
+	background-size: cover;
+	position: relative
+
+.model
+	background: url('../../src/images/model.png') center no-repeat
+	height: 480px
+	width: 128px
+	position: absolute
+	bottom: 65px
+	left: 50%
+	transform: translateX(-50%)
+	
+.tabs
+	font-size: 20px
+	list-style-type: none
+	
+.tabs__item
+	display: inline-block
+	
+.tabs-content
+	font-size: 16px

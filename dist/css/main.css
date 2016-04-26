@@ -268,12 +268,110 @@ body.open .modal-holder {
 .modal {
   width: 996px;
   margin: 80px auto;
-  background-color: #fff;
   overflow-y: auto;
   overflow-x: hidden;
 }
-.modal-body {
+.modal__header {
+  position: relative;
+  overflow: hidden;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e5e5;
+  color: #000;
+  font-family: 'FuturaLight';
   background-color: #fff;
+}
+.modal__close {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 48px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.modal__close:focus,
+.modal__close:hover,
+.modal__close:active {
+  outline: none;
+  border: none;
+  background: none;
+}
+.modal__icon {
+  display: inline-block;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.modal__title {
+  font-size: 28px;
+  line-height: 48px;
+}
+.modal__body {
+  font-size: 0;
+  position: relative;
+}
+.modal__sidebar {
+  width: 170px;
+  font-size: 20px;
+  list-style-type: none;
+  background-color: #f7f7f7;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+}
+.modal__sidebar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #f7f7f7;
+  width: 170px;
+  z-index: -1;
+}
+.modal__sidebar-item {
+  padding: 16px 32px;
+  color: #000;
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+.modal__sidebar-item.active {
+  background-color: #000;
+  color: #fff;
+}
+.modal__content {
+  width: 826px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fff;
+}
+.model-overlay {
+  width: 100%;
+  height: 700px;
+  background: url("../../src/images/model-bg.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.model {
+  background: url("../../src/images/model.png") center no-repeat;
+  height: 480px;
+  width: 128px;
+  position: absolute;
+  bottom: 65px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.tabs {
+  font-size: 20px;
+  list-style-type: none;
+}
+.tabs__item {
+  display: inline-block;
+}
+.tabs-content {
+  font-size: 16px;
 }
 .footer {
   padding: 0 56px;

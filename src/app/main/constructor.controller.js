@@ -39,10 +39,17 @@
 		      size: 'XS'
 		    };
 		   	vm.modalOpen = false;
-		    vm.showModal = function() {
+		    vm.showModal = function () {
 		     	vm.modalOpen = !vm.modalOpen;
 			}
+			vm.closeModal = function () {
+		     	vm.modalOpen = false;
+			}
+			vm.ctrl = 1;
+			vm.isActive = function (ctrlId) {
+				return this.ctrl === ctrlId;
+			}
+	
 		 });
 
-	
 })();
