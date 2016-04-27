@@ -47,7 +47,10 @@
 			}
 			vm.ctrl = 1;
 			vm.isActive = function (ctrlId) {
-				return this.ctrl === ctrlId;
+				return vm.ctrl === ctrlId;
+			}
+			vm.activate = function (ctrlId) {
+				return vm.ctrl = ctrlId;
 			}
 	
 		 });
