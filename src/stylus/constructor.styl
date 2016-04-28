@@ -15,9 +15,13 @@ body.open
 .modal
 	width: $model_width 
 	margin: 80px auto
+	
+.modal-wrapper
+	width: 100% 
+	margin: 0 auto
 	overflow-y: auto
 	overflow-x: hidden
-	
+	height: 100%
 	
 .modal__header
 	position: relative
@@ -57,7 +61,7 @@ body.open
 	position: relative
 	
 .modal__sidebar
-	width: 170px
+	width: $sidebar_width
 	font-size: 20px
 	list-style-type: none
 	background-color: $color_bggrey
@@ -66,14 +70,13 @@ body.open
 	margin: 0
 	padding: 0
 	
-	
 	&:after
 		content: ""
 		position: absolute
 		top: 0
 		bottom: 0
 		background-color: $color_bggrey
-		width: 170px
+		width: $sidebar_width
 		z-index: -1
 	
 .modal__sidebar-item
@@ -85,9 +88,42 @@ body.open
 	&.active
 		background-color: $color_black
 		color: $color_white
+		
+		.options-board
+			display: block	
+
+.options-board
+	width: 200px
+	height: 700px
+	overflow-x: hidden
+	overflow-y: auto
+	padding: 20px
+	position: absolute
+	top: 0
+	left: $sidebar_width 
+	background-color: $color_white
+	z-index: 1
+	display: none
+
+.option
+	width: 150px
+	height: 150px 
+	border: 5px solid $color_lightfray
+	text-align: center
+	margin-top: 20px
+	
+	&:hover
+		border-color: $color_yellow
+		
+	&:first-child
+		margin-top: 0
+		
+
+.option__img
+	height: 100%
 	
 .modal__content
-	width: $model_width - 170px
+	width: $model_width - $sidebar_width
 	display: inline-block
 	vertical-align: top
 	background-color: $color_white

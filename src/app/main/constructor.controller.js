@@ -26,9 +26,31 @@
 		        type: 'vStyle',
 		        bgColor: 'pink',
 		        title: 'slipOver',
-		        image: '/src/images/style/slip-over.jpg'
+		        image: '/src/images/style/vStyle.jpg'
 		      }
 		    ];
+		    vm.textiles = [
+		    	{
+		    		title: 'silk',
+		    		image: '/src/images/textile/silk.jpg'
+		    	},
+		    	{
+		    		title: 'knitwear',
+		    		image: '/src/images/textile/knitwear.jpg'
+		    	},
+		    	{
+		    		title: 'coton',
+		    		image: '/src/images/textile/coton.jpg'
+		    	},
+		    	{
+		    		title: 'linen',
+		    		image: '/src/images/textile/linen.jpg'
+		    	},
+		    	{
+		    		title: 'chiffon',
+		    		image: '/src/images/textile/chiffon.jpg'
+		    	}
+		    ]
 		    vm.model = {
 		      style: vm.styles[0],
 		      color: 'red',
@@ -45,9 +67,12 @@
 			vm.closeModal = function () {
 		     	vm.modalOpen = false;
 			}
-			vm.ctrl = 1;
-			vm.isActive = function (ctrlId) {
-				return this.ctrl === ctrlId;
+			vm.modelProperty = 'style';
+			vm.isActive = function (modelProperty) {
+				return vm.modelProperty === modelProperty;
+			}
+			vm.activated = function (modelProperty){
+				vm.modelProperty = modelProperty;
 			}
 	
 		 });
