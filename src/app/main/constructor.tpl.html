@@ -13,8 +13,9 @@
         <ul class="modal__sidebar">
           <li class="modal__sidebar-item" ng-class="{active: vm.isActive('style')}"  ng-click="vm.activated('style')">Style
             <div class="options-board">
-              <div class="option" ng-repeat="style in vm.styles">
+              <div class="option" ng-repeat="style in vm.styles" ng-class="{'checked in': vm.model.style.type == style.type}" ng-click="vm.model.style = style">
                 <img ng-src="{{style.image}}" alt="" class="option__img">
+                {{style.type}}
               </div>
             </div>
           </li>
@@ -25,9 +26,27 @@
               </div>
             </div>
           </li>
-          <li class="modal__sidebar-item" ng-class="{active: vm.isActive('decolette')}"  ng-click="vm.activated('decolette')">Decollete</li>
-          <li class="modal__sidebar-item" ng-class="{active: vm.isActive('skirt')}"  ng-click="vm.activated('skirt')">Skirt</li>
-          <li class="modal__sidebar-item" ng-class="{active: vm.isActive('sleeve')}"  ng-click="vm.activated('sleeve')">Sleeve</li>
+          <li class="modal__sidebar-item" ng-class="{active: vm.isActive('decolette')}"  ng-click="vm.activated('decolette')">Decollete
+            <div class="options-board">
+              <div class="option" ng-repeat="decollete in vm.decolletes">
+                <img ng-src="{{decollete.image}}" alt="" class="option__img">
+              </div>
+            </div>
+          </li>
+          <li class="modal__sidebar-item" ng-class="{active: vm.isActive('skirt')}"  ng-click="vm.activated('skirt')">Skirt
+            <div class="options-board">
+              <div class="option" ng-repeat="skirt in vm.skirts | filter: {styleType: vm.model.style.type}">
+                <img ng-src="{{skirt.image}}" alt="" class="option__img">
+              </div>
+            </div>
+          </li>
+          <li class="modal__sidebar-item" ng-class="{active: vm.isActive('sleeve')}"  ng-click="vm.activated('sleeve')">Sleeve
+            <div class="options-board">
+              <div class="option" ng-repeat="sleeve in vm.sleeves">
+                <img ng-src="{{sleeve.image}}" alt="" class="option__img">
+              </div>
+            </div>
+          </li>
         </ul>
         <div class="modal__content">
           <div class="model-overlay">

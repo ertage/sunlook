@@ -367,6 +367,7 @@ body.open .modal-holder {
   border: 5px solid #e5e5e5;
   text-align: center;
   margin-top: 20px;
+  background-color: #f7f7f7;
 }
 .option:hover {
   border-color: #e8bc5e;
