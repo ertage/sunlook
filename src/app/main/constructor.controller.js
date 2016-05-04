@@ -50,6 +50,10 @@
 			];
 
 			vm.decolletes = [
+				{
+		    		title: 'jewel',
+		    		image: '/src/images/decollete/jewel.png'
+		    	},
 		    	{
 		    		title: 'scoop',
 		    		image: '/src/images/decollete/scoop.png'
@@ -61,10 +65,6 @@
 		    	{
 		    		title: 'v-neck',
 		    		image: '/src/images/decollete/v-neck.png'
-		    	},
-		    	{
-		    		title: 'jewel',
-		    		image: '/src/images/decollete/jewel.png'
 		    	},
 		    	{
 		    		title: 'jewel',
@@ -123,6 +123,25 @@
 		    	}
 		    ];
 
+			vm.straightType = [
+				{
+					title: 'shorter',
+					image: '/src/images/skirts/shorter.png'
+				},
+				{
+					title: 'short',
+					image: '/src/images/skirts/short.png'
+				},
+				{
+					title: 'long',
+					image: '/src/images/skirts/long.png'
+				},
+				{
+					title: 'longer',
+					image: '/src/images/skirts/longer.png'
+				}
+		    ];
+
 		    vm.model = {
 				style: vm.styles[0],
 				textile: vm.textiles[0],
@@ -130,6 +149,7 @@
 				color: 'red',
 				skirt: vm.skirts[0],
 				sleeve: vm.sleeves[0],
+				straightType: vm.straightType[0],
 				size: 'XS'
 			};
 
@@ -151,14 +171,6 @@
 				vm.modelProperty = modelProperty;
 			}
 			
-			
-			vm.activateCheck = function (style) {
-				if ( vm.styles.type ==  'straight' ){
-					vm.checked = true;
-				} else {
-					vm.checked = false;
-				}
-			}
 			
 
 		 });

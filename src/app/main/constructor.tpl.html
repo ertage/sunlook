@@ -13,7 +13,7 @@
         <ul class="modal__sidebar">
           <li class="modal__sidebar-item" ng-class="{active: vm.isActive('style')}"  ng-click="vm.activated('style')">Style
             <div class="options-board">
-              <div class="option" ng-repeat="style in vm.styles" ng-class="{'checked in': vm.model.style.type == style.type}" ng-click="vm.model.style = style">
+              <div class="option" ng-repeat="style in vm.styles" ng-class="{'checked': vm.model.style.type == style.type}" ng-click="vm.model.style = style">
                 <img ng-src="{{style.image}}" alt="" class="option__img">
                 {{style.type}}
               </div>
@@ -21,21 +21,28 @@
           </li>
           <li class="modal__sidebar-item" ng-class="{active: vm.isActive('textile')}"  ng-click="vm.activated('textile')">Textile
             <div class="options-board">
-              <div class="option" ng-repeat="textile in vm.textiles">
+              <div class="option" ng-repeat="textile in vm.textiles" ng-class="{checked: vm.model.textile.title == textile.title}">
                 <img ng-src="{{textile.image}}" alt="" class="option__img">
               </div>
             </div>
           </li>
           <li class="modal__sidebar-item" ng-class="{active: vm.isActive('decolette')}"  ng-click="vm.activated('decolette')">Decollete
             <div class="options-board">
-              <div class="option" ng-repeat="decollete in vm.decolletes">
+              <div class="option" ng-repeat="decollete in vm.decolletes" ng-class="{checked: vm.model.decollete.title == decollete.title}">
                 <img ng-src="{{decollete.image}}" alt="" class="option__img">
               </div>
             </div>
           </li>
-          <li class="modal__sidebar-item" ng-class="{active: vm.isActive('skirt')}"  ng-click="vm.activated('skirt')">Skirt
+          <li class="modal__sidebar-item" ng-class="{active: vm.isActive('skirt')}"  ng-click="vm.activated('skirt')"  ng-hide="vm.model.style.type == 'straight'">Skirt
             <div class="options-board">
-              <div class="option" ng-repeat="skirt in vm.skirts | filter: {styleType: vm.model.style.type}">
+              <div class="option" ng-repeat="skirt in vm.skirts" ng-class="{checked: vm.model.skirt.title == skirt.title}">
+                <img ng-src="{{skirt.image}}" alt="" class="option__img">
+              </div>
+            </div>
+          </li>
+          <li class="modal__sidebar-item" ng-class="{active: vm.isActive('skirt')}"  ng-click="vm.activated('skirt')" ng-show="vm.model.style.type == 'straight'">Skirt's length
+            <div class="options-board">
+              <div class="option" ng-repeat="skirt in vm.straightType" ng-class="{checked: vm.model.straightType.title == skirt.title}">
                 <img ng-src="{{skirt.image}}" alt="" class="option__img">
               </div>
             </div>
@@ -50,7 +57,15 @@
         </ul>
         <div class="modal__content">
           <div class="model-overlay">
-            <div class="model"></div>
+            <div class="model">
+              <div class="model__decolette">
+                <img src="/src/images/model/straight_decollete_jewel_white.png" alt="model__decolette" class="model__decolette-img">
+              </div>
+              <div class="model__skirt">
+                <img src="/src/images/model/face_straight_skirt_shorter.png" alt="model__skirt" class="model__skirt-img">
+              </div>
+              <div class="model__sleeve"></div>
+            </div>
           </div>
           <div class="model-contrller">
             <ul class="tabs">

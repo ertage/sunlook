@@ -369,7 +369,8 @@ body.open .modal-holder {
   margin-top: 20px;
   background-color: #f7f7f7;
 }
-.option:hover {
+.option:hover,
+.option.checked {
   border-color: #e8bc5e;
 }
 .option:first-child {
@@ -410,6 +411,16 @@ body.open .modal-holder {
 }
 .tabs-content {
   font-size: 16px;
+}
+.model__decolette,
+.model__skirt {
+  text-align: center;
+}
+.model__skirt {
+  margin-top: -20px;
+}
+.model__decolette-img {
+  margin-top: 35px;
 }
 .footer {
   padding: 0 56px;
