@@ -42,8 +42,11 @@
           </li>
           <li class="modal__sidebar-item" ng-class="{active: vm.isActive('skirt')}"  ng-click="vm.activated('skirt')" ng-show="vm.model.style.type == 'straight'">Skirt's length
             <div class="options-board">
-              <div class="option" ng-repeat="skirt in vm.straightType" ng-class="{checked: vm.model.straightType.title == skirt.title}">
-                <img ng-src="{{skirt.image}}" alt="" class="option__img">
+              <div class="option"
+                ng-repeat="straightType in ::vm.straightTypes"
+                ng-class="{checked: vm.model.straightType.id === straightType.id}"
+                ng-click="vm.model.straightType = straightType">
+                <img ng-src="{{::straightType.imagePreview}}" alt="" class="option__img">
               </div>
             </div>
           </li>
@@ -62,7 +65,7 @@
                 <img src="/src/images/model/straight_decollete_jewel_white.png" alt="model__decolette" class="model__decolette-img">
               </div>
               <div class="model__skirt">
-                <img src="/src/images/model/face_straight_skirt_shorter.png" alt="model__skirt" class="model__skirt-img">
+                <img ng-src="{{vm.model.straightType.image}}" alt="model__skirt" class="model__skirt-img">
               </div>
               <div class="model__sleeve"></div>
             </div>

@@ -123,24 +123,34 @@
 		    	}
 		    ];
 
-			vm.straightType = [
-				{
-					title: 'shorter',
-					image: '/src/images/skirts/shorter.png'
-				},
-				{
-					title: 'short',
-					image: '/src/images/skirts/short.png'
-				},
-				{
-					title: 'long',
-					image: '/src/images/skirts/long.png'
-				},
-				{
-					title: 'longer',
-					image: '/src/images/skirts/longer.png'
-				}
+				vm.straightTypes = [
+					{
+						id: 'shorter',
+						title: 'shorter',
+						imagePreview: '/src/images/skirts/shorter.png',
+						image: '/src/images/model/face_straight_skirt_shorter.png'
+					},
+					{
+						id: 'short',
+						title: 'short',
+						imagePreview: '/src/images/skirts/short.png',
+						image: '/src/images/sleeve/roll-up.png'
+					},
+					{
+						id: 'long',
+						title: 'long',
+						imagePreview: '/src/images/skirts/long.png',
+						image: '/src/images/model/face_straight_skirt_shorter.png'
+					},
+					{
+						id: 'longer',
+						title: 'longer',
+						imagePreview: '/src/images/skirts/longer.png',
+						image: '/src/images/model/face_straight_skirt_shorter.png'
+					}
 		    ];
+
+
 
 		    vm.model = {
 				style: vm.styles[0],
@@ -149,7 +159,7 @@
 				color: 'red',
 				skirt: vm.skirts[0],
 				sleeve: vm.sleeves[0],
-				straightType: vm.straightType[0],
+				straightType: vm.straightTypes[0],
 				size: 'XS'
 			};
 
@@ -170,8 +180,8 @@
 			vm.activated = function (modelProperty){
 				vm.modelProperty = modelProperty;
 			}
-			
-			
+
+
 
 		 });
 
