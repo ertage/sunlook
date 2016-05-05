@@ -21,7 +21,7 @@
           </li>
           <li class="modal__sidebar-item" ng-class="{active: vm.isActive('textile')}"  ng-click="vm.activated('textile')">Textile
             <div class="options-board">
-              <div class="option" ng-repeat="textile in vm.textiles" ng-class="{checked: vm.model.textile.title == textile.title}">
+              <div class="option" ng-repeat="textile in vm.textiles" ng-class="{checked: vm.model.textile.title == textile.title}" ng-click="vm.model.textile = textile">
                 <img ng-src="{{textile.image}}" alt="" class="option__img">
               </div>
             </div>
@@ -35,7 +35,7 @@
           </li>
           <li class="modal__sidebar-item" ng-class="{active: vm.isActive('skirt')}"  ng-click="vm.activated('skirt')"  ng-hide="vm.model.style.type == 'straight'">Skirt
             <div class="options-board">
-              <div class="option" ng-repeat="skirt in vm.skirts" ng-class="{checked: vm.model.skirt.title == skirt.title}">
+              <div class="option" ng-repeat="skirt in vm.skirts | filter: {styleType: vm.model.style.type}" ng-class="{checked: vm.model.skirt.title == skirt.title}">
                 <img ng-src="{{skirt.image}}" alt="" class="option__img">
               </div>
             </div>

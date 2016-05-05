@@ -79,12 +79,12 @@
 
 		    vm.skirts = [
 		    	{
-		    		styleType: 'straight',
+		    		styleType: 'vStyle',
 		    		title: 'pencil',
 		    		image: '/src/images/skirts/pencil.png'
 		    	},
 		    	{
-		    		styleType: 'straight',
+		    		styleType: 'vStyle',
 		    		title: 'tube',
 		    		image: '/src/images/skirts/tube.png'
 		    	},
@@ -99,7 +99,7 @@
 		    		image: '/src/images/skirts/a-line.png'
 		    	},
 		    	{
-		    		styleType: 'vStyle',
+		    		styleType: 'slipOver',
 		    		title: 'accordion',
 		    		image: '/src/images/skirts/accordion.png'
 		    	}
