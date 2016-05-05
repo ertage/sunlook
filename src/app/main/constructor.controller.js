@@ -52,23 +52,28 @@
 			vm.decolletes = [
 				{
 		    		title: 'jewel',
-		    		image: '/src/images/decollete/jewel.png'
+		    		imagePreview: '/src/images/decollete/jewel.png',
+		    		image: '/src/images/model/decollete_jewel_white.png'
 		    	},
 		    	{
 		    		title: 'scoop',
-		    		image: '/src/images/decollete/scoop.png'
+		    		imagePreview: '/src/images/decollete/scoop.png',
+		    		image: '/src/images/model/decollete_scoop_white.png'
 		    	},
 		    	{
 		    		title: 'square',
-		    		image: '/src/images/decollete/square.png'
+		    		imagePreview: '/src/images/decollete/square.png',
+		    		image: '/src/images/model/decollete_square_white.png'
 		    	},
 		    	{
 		    		title: 'v-neck',
-		    		image: '/src/images/decollete/v-neck.png'
+		    		imagePreview: '/src/images/decollete/v-neck.png',
+		    		image: '/src/images/model/decollete_v-neck_white.png'
 		    	},
 		    	{
-		    		title: 'jewel',
-		    		image: '/src/images/decollete/sabrina.png'
+		    		title: 'sabrina',
+		    		imagePreview: '/src/images/decollete/sabrina.png',
+		    		image: '/src/images/model/decollete_sabrina_white.png'
 		    	}
 		    ];
 
@@ -123,32 +128,32 @@
 		    	}
 		    ];
 
-				vm.straightTypes = [
-					{
-						id: 'shorter',
-						title: 'shorter',
-						imagePreview: '/src/images/skirts/shorter.png',
-						image: '/src/images/model/face_straight_skirt_shorter.png'
-					},
-					{
-						id: 'short',
-						title: 'short',
-						imagePreview: '/src/images/skirts/short.png',
-						image: '/src/images/sleeve/roll-up.png'
-					},
-					{
-						id: 'long',
-						title: 'long',
-						imagePreview: '/src/images/skirts/long.png',
-						image: '/src/images/model/face_straight_skirt_shorter.png'
-					},
-					{
-						id: 'longer',
-						title: 'longer',
-						imagePreview: '/src/images/skirts/longer.png',
-						image: '/src/images/model/face_straight_skirt_shorter.png'
-					}
-		    ];
+			vm.straightTypes = [
+				{
+					id: 'shorter',
+					title: 'shorter',
+					imagePreview: '/src/images/skirts/shorter.png',
+					image: '/src/images/model/face_straight_skirt_shorter.png'
+				},
+				{
+					id: 'short',
+					title: 'short',
+					imagePreview: '/src/images/skirts/short.png',
+					image: '/src/images/model/face_straight_skirt_short.png'
+				},
+				{
+					id: 'long',
+					title: 'long',
+					imagePreview: '/src/images/skirts/long.png',
+					image: '/src/images/model/face_straight_skirt_long.png'
+				},
+				{
+					id: 'longer',
+					title: 'longer',
+					imagePreview: '/src/images/skirts/longer.png',
+					image: '/src/images/model/face_straight_skirt_longer.png'
+				}
+	    	];
 
 
 

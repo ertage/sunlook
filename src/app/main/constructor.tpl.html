@@ -28,8 +28,8 @@
           </li>
           <li class="modal__sidebar-item" ng-class="{active: vm.isActive('decolette')}"  ng-click="vm.activated('decolette')">Decollete
             <div class="options-board">
-              <div class="option" ng-repeat="decollete in vm.decolletes" ng-class="{checked: vm.model.decollete.title == decollete.title}">
-                <img ng-src="{{decollete.image}}" alt="" class="option__img">
+              <div class="option" ng-repeat="decollete in vm.decolletes" ng-class="{checked: vm.model.decollete.title == decollete.title}" ng-click="vm.model.decollete = decollete">
+                <img ng-src="{{decollete.imagePreview}}" alt="" class="option__img">
               </div>
             </div>
           </li>
@@ -62,7 +62,7 @@
           <div class="model-overlay">
             <div class="model">
               <div class="model__decolette">
-                <img src="/src/images/model/straight_decollete_jewel_white.png" alt="model__decolette" class="model__decolette-img">
+                <img ng-src="{{vm.model.decollete.image}}" alt="model__decolette" class="model__decolette-img">
               </div>
               <div class="model__skirt">
                 <img ng-src="{{vm.model.straightType.image}}" alt="model__skirt" class="model__skirt-img">
