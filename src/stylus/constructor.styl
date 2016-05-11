@@ -104,6 +104,7 @@ body.open
 	background-color: $color_white
 	z-index: 1
 	display: none
+	border-bottom: 1px solid $color_lightfray
 
 .option
 	width: 150px
@@ -130,12 +131,15 @@ body.open
 	vertical-align: top
 	background-color: $color_white
 	
+.model-contrller
+	padding: 0 24px 24px
 .model-overlay
 	width: 100%
 	height: 700px
 	background: url('../../src/images/model-bg.jpg') center no-repeat
 	background-size: cover;
 	position: relative
+	border-bottom: 1px solid $color_lightfray
 
 .model
 	background: url('../../src/images/model.png') center no-repeat
@@ -149,13 +153,53 @@ body.open
 .tabs
 	font-size: 20px
 	list-style-type: none
+	border-bottom: 1px solid $color_lightfray
+	padding: 0
+	margin: 0
 	
 .tabs__item
 	display: inline-block
+	vertical-align: top
+	padding: 16px 0
+	margin: 0 16px
+	border-bottom: 3px solid transparent	
+	cursor: pointer
+	
+	&.active
+		border-color: $color_yellow
+	
+	&:first-child
+		margin-left: 0
 	
 .tabs-content
 	font-size: 16px
 	
+.tabs-content__item
+	padding-top: 24px
+	position: relative
+	
+.tabs-control
+	display: inline-block
+	margin-left: 16px
+	width: 130px
+	&:first-child
+		margin-left: 0
+	
+.tabs-price
+	position: absolute
+	font-size: 26px
+	font-family: $font_additional1_3 
+	color: $color_black
+	right: 0
+	bottom: 5px
+	text-transform: uppercase
+	
+.input
+	height: 40px
+	border: 1px solid $color_lightfray
+	padding: 0 8px
+	display: block
+
 .model__decolette,
 .model__skirt
 	text-align: center
@@ -166,3 +210,49 @@ body.open
 .model__decolette-img
 	margin-top: 40px
 	
+
+
+.radiobutton
+	width: 92px
+	label
+		color: $color_black
+		font-weight: normal
+		font-size: 16px
+		span 
+			display: inline-block;
+			margin-right: 10px
+			width: 16px
+			height: 16px
+			border: 1px solid $color_lightfray
+			border-radius: 4px
+			background-color: $Color_White
+			vertical-align: middle
+			cursor: pointer
+			position: relative
+			border-radius: 50%
+			&:hover
+				span 
+					border: 1px solid $color_yellow
+					background: $color_lightfray
+
+	input
+		display: none
+
+               
+		&:checked
+			& + span
+				border: 1px solid $color_yellow
+				background: $Color_White 
+
+				&:before
+					content: ''
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					width: 8px
+					height: 8px
+					background-color: $color_yellow 
+					border-radius: 50%
+
+				

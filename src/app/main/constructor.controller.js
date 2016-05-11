@@ -168,6 +168,16 @@
 				size: 'XS'
 			};
 
+			vm.tabs = [
+				{
+					title: "I know my size",
+					active: false
+				},
+				{
+					title: "I don't know my size",
+					active: true
+				}
+			]
 		   	vm.modalOpen = false;
 		    vm.showModal = function () {
 		     	vm.modalOpen = !vm.modalOpen;
@@ -175,18 +185,23 @@
 
 			vm.closeModal = function () {
 		     	vm.modalOpen = false;
-			}
+			};
 
 			vm.modelProperty = 'style';
 			vm.isActive = function (modelProperty) {
 				return vm.modelProperty === modelProperty;
-			}
+			};
 
 			vm.activated = function (modelProperty){
 				vm.modelProperty = modelProperty;
+			};
+
+			vm.onClickTab = function(tab) {
+				for(var i in vm.tabs){
+					vm.tabs[i].active = false;
+				}
+				tab.active = true;
 			}
-
-
 
 		 });
 

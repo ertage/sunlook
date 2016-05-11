@@ -72,12 +72,64 @@
           </div>
           <div class="model-contrller">
             <ul class="tabs">
-              <li class="tabs__item">I know my size</li>
-              <li class="tabs__item">I don't know my size</li>
+              <li class="tabs__item" 
+                ng-repeat="tab in vm.tabs" 
+                ng-class="{active: tab.active}"
+                ng-click="vm.onClickTab(tab)">{{tab.title}}</li>
             </ul>
             <div class="tabs-content">
-              <div class="tabs-content__item"></div>
-              <div class="tabs-content__item"></div>
+              <div class="tabs-content__item" ng-show="vm.tabs[0].active">
+                <div class="tabs-control radiobutton">
+                  <label>
+                  <input type="radio" name="size">
+                  <span></span>
+                  XS</label>
+                </div>
+                <div class="tabs-control radiobutton">
+                  <label>
+                  <input type="radio" name="size">
+                  <span></span>
+                  S</label>
+                </div>
+                <div class="tabs-control radiobutton">
+                  <label>
+                  <input type="radio" name="size">
+                  <span></span>
+                  M</label>
+                </div>
+                <div class="tabs-control radiobutton">
+                  <label>
+                  <input type="radio" name="size">
+                  <span></span>
+                  L</label>
+                </div>
+                <div class="tabs-control radiobutton">
+                  <button class="button">Get price</button>
+                </div>
+                <div class="tabs-price">
+                  56.95 eur
+                </div>
+              </div>
+              <div class="tabs-content__item" ng-show="vm.tabs[1].active">
+                <div class="tabs-control">
+                  <label for="waist">Waist</label>
+                  <input type="text" name="waist" placeholder="mm" class="input">
+                </div>
+                <div class="tabs-control">
+                  <label for="breast">Breast</label>
+                  <input type="text" name="breast" placeholder="mm" class="input">
+                </div>
+                <div class="tabs-control">
+                  <label for="tight">Tight</label>
+                  <input type="text" name="tight" placeholder="mm" class="input">
+                </div>
+                <div class="tabs-control">
+                  <button class="button">Get price</button>
+                </div>
+                <div class="tabs-price">
+                  56.95 eur
+                </div>
+              </div>
             </div>
           </div>
         </div>

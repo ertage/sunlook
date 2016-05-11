@@ -360,6 +360,7 @@ body.open .modal-holder {
   background-color: #fff;
   z-index: 1;
   display: none;
+  border-bottom: 1px solid #e5e5e5;
 }
 .option {
   width: 150px;
@@ -385,12 +386,16 @@ body.open .modal-holder {
   vertical-align: top;
   background-color: #fff;
 }
+.model-contrller {
+  padding: 0 24px 24px;
+}
 .model-overlay {
   width: 100%;
   height: 700px;
   background: url("../../src/images/model-bg.jpg") center no-repeat;
   background-size: cover;
   position: relative;
+  border-bottom: 1px solid #e5e5e5;
 }
 .model {
   background: url("../../src/images/model.png") center no-repeat;
@@ -405,12 +410,53 @@ body.open .modal-holder {
 .tabs {
   font-size: 20px;
   list-style-type: none;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0;
+  margin: 0;
 }
 .tabs__item {
   display: inline-block;
+  vertical-align: top;
+  padding: 16px 0;
+  margin: 0 16px;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+.tabs__item.active {
+  border-color: #e8bc5e;
+}
+.tabs__item:first-child {
+  margin-left: 0;
 }
 .tabs-content {
   font-size: 16px;
+}
+.tabs-content__item {
+  padding-top: 24px;
+  position: relative;
+}
+.tabs-control {
+  display: inline-block;
+  margin-left: 16px;
+  width: 130px;
+}
+.tabs-control:first-child {
+  margin-left: 0;
+}
+.tabs-price {
+  position: absolute;
+  font-size: 26px;
+  font-family: 'FuturaPTW01Demi';
+  color: #000;
+  right: 0;
+  bottom: 5px;
+  text-transform: uppercase;
+}
+.input {
+  height: 40px;
+  border: 1px solid #e5e5e5;
+  padding: 0 8px;
+  display: block;
 }
 .model__decolette,
 .model__skirt {
@@ -421,6 +467,50 @@ body.open .modal-holder {
 }
 .model__decolette-img {
   margin-top: 40px;
+}
+.radiobutton {
+  width: 92px;
+}
+.radiobutton label {
+  color: #000;
+  font-weight: normal;
+  font-size: 16px;
+}
+.radiobutton label span {
+  display: inline-block;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  background-color: $Color_White;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
+}
+.radiobutton label span:hover span {
+  border: 1px solid #e8bc5e;
+  background: #e5e5e5;
+}
+.radiobutton input {
+  display: none;
+}
+.radiobutton input:checked + span {
+  border: 1px solid #e8bc5e;
+  background: $Color_White;
+}
+.radiobutton input:checked + span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #e8bc5e;
+  border-radius: 50%;
 }
 .footer {
   padding: 0 56px;
