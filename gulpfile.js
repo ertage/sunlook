@@ -3,23 +3,14 @@
 var gulp = require('gulp'),
 	stylus = require('gulp-stylus'),
 	autoprefixer = require('gulp-autoprefixer'),
-	livereload = require('gulp-livereload'),
-	webserver = require('gulp-webserver'),
 	cssmin = require('gulp-cssmin'),
-	rename = require('gulp-rename');
+  useref = require('gulp-useref'),
+  server = require('gulp-server-livereload'),
+  gulpif = require('gulp-if'),
+  uglify = require('gulp-uglify');
 
-livereload({ start: true })
+var debug = require('gulp-debug');
 
-// gulp.task('default', function () {
-// 	return gulp.src('src/app.css')
-// 		.pipe(autoprefixer({
-// 			browsers: ['last 2 versions'],
-// 			cascade: false
-// 		}))
-// 		.pipe(gulp.dest('dist'));
-// })
-
-// Get one .styl file and render
 gulp.task('styles', function () {
   return gulp.src('./src/stylus/main.styl')
     .pipe(stylus())
@@ -27,26 +18,44 @@ gulp.task('styles', function () {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-    .pipe(gulp.dest('./dist/css'))
+    //.pipe(gulp.dest('./dist/css'))
     .pipe(cssmin())
-    .pipe(rename({suffix: '.min'}))
-	  .pipe(gulp.dest('./dist/css'))
-    .pipe(livereload());
+    //.pipe(rename({suffix: '.min'}))
+	  .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('fonts', function() {
+  return gulp.src('src/fonts/**/*.*')
+      .pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('images', function() {
+  return gulp.src('src/images/**/*.*')
+      .pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('html', function() {
+  return gulp.src('src/app/**/*.html')
+      .pipe(gulp.dest('dist/app'));
 });
 
 gulp.task('watch', function() {
-  livereload.listen();
-   gulp.watch('./src/stylus/*.styl', ['styles']);
+   gulp.watch('./src/**/*.*', ['dist']);
 });
 
 gulp.task('webserver', function() {
-  gulp.src('')
-    .pipe(webserver({
+  gulp.src('dist')
+    .pipe(server({
       livereload: true,
-      directoryListing: true,
-      open: true,
-      fallback: 'index.html'
+      open: true
     }));
 });
 
-gulp.task('default', ['styles', 'watch', 'webserver']);
+gulp.task('dist', ['styles', 'fonts', 'images', 'html'], function () {
+    return gulp.src('src/index.html')
+        .pipe(useref({ searchPath: ['src', 'dist', '.'] }))
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', ['dist', 'watch', 'webserver']);
