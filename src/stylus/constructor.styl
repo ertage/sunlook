@@ -2,7 +2,7 @@ Fbody.open
 	position: fixed
 	.modal-holder
 		display: block
-		
+
 .modal-holder
 	position: fixed
 	top: 0
@@ -11,27 +11,27 @@ Fbody.open
 	right: 0
 	background: rgba(0, 0, 0, 0.4)
 	display: none
-	
+
 .modal
-	width: $model_width 
+	width: $model_width
 	margin: 80px auto
-	
+
 .modal-wrapper
-	width: 100% 
+	width: 100%
 	margin: 0 auto
 	overflow-y: auto
 	overflow-x: hidden
 	height: 100%
-	
+
 .modal__header
 	position: relative
 	overflow: hidden
 	padding: 16px 24px
 	border-bottom: 1px solid $color_lightfray
 	color: $color_black
-	font-family: $font_additional1_1	
+	font-family: $font_additional1_1
 	background-color: $color_white
-	
+
 .modal__close
 	position: absolute
 	right: 24px
@@ -47,19 +47,19 @@ Fbody.open
 		outline: none
 		border: none
 		background: none
-		
+
 .modal__icon
 	display: inline-block;
 	transform: rotate(45deg)
-	
+
 .modal__title
 	font-size: 28px
 	line-height: 48px
-	
+
 .modal__body
 	font-size: 0
 	position: relative
-	
+
 .modal__sidebar
 	width: $sidebar_width
 	font-size: 20px
@@ -69,7 +69,7 @@ Fbody.open
 	vertical-align: top
 	margin: 0
 	padding: 0
-	
+
 	&:after
 		content: ""
 		position: absolute
@@ -78,19 +78,19 @@ Fbody.open
 		background-color: $color_bggrey
 		width: $sidebar_width
 		z-index: -1
-	
+
 .modal__sidebar-item
 	padding: 16px 32px
 	color: $color_black
 	border-bottom: 1px solid $color_lightfray
 	cursor: pointer
-	
+
 	&.active
 		background-color: $color_black
 		color: $color_white
-		
+
 		.options-board
-			display: block	
+			display: block
 
 .options-board
 	width: 200px
@@ -100,7 +100,7 @@ Fbody.open
 	padding: 20px
 	position: absolute
 	top: 0
-	left: $sidebar_width 
+	left: $sidebar_width
 	background-color: $color_white
 	z-index: 1
 	display: none
@@ -108,92 +108,92 @@ Fbody.open
 
 .option
 	width: 150px
-	height: 150px 
+	height: 150px
 	border: 5px solid $color_lightfray
 	text-align: center
 	margin-top: 20px
 	background-color: $color_bggrey
-	
+
 	&:hover
 	&.checked
 		border-color: $color_yellow
-		
+
 	&:first-child
 		margin-top: 0
-		
+
 
 .option__img
 	height: 100%
-	
+
 .modal__content
 	width: $model_width - $sidebar_width
 	display: inline-block
 	vertical-align: top
 	background-color: $color_white
-	
+
 .model-contrller
 	padding: 0 24px 24px
 .model-overlay
 	width: 100%
 	height: 700px
-	background: url('../../src/images/model-bg.jpg') center no-repeat
+	background: url('/images/model-bg.jpg') center no-repeat
 	background-size: cover;
 	position: relative
 	border-bottom: 1px solid $color_lightfray
 
 .model
-	background: url('../../src/images/model.png') center no-repeat
+	background: url('/images/model.png') center no-repeat
 	height: 480px
 	width: 128px
 	position: absolute
 	bottom: 65px
 	left: 50%
 	transform: translateX(-50%)
-	
+
 .tabs
 	font-size: 20px
 	list-style-type: none
 	border-bottom: 1px solid $color_lightfray
 	padding: 0
 	margin: 0
-	
+
 .tabs__item
 	display: inline-block
 	vertical-align: top
 	padding: 16px 0
 	margin: 0 16px
-	border-bottom: 3px solid transparent	
+	border-bottom: 3px solid transparent
 	cursor: pointer
-	
+
 	&.active
 		border-color: $color_yellow
-	
+
 	&:first-child
 		margin-left: 0
-	
+
 .tabs-content
 	font-size: 16px
-	
+
 .tabs-content__item
 	padding-top: 24px
 	position: relative
-	
+
 .tabs-control
 	display: inline-block
 	margin-left: 16px
 	width: 130px
 	&:first-child
 		margin-left: 0
-	
+
 .tabs-price
 	position: absolute
 	font-size: 26px
-	font-family: $font_additional1_3 
+	font-family: $font_additional1_3
 	color: $color_black
 	right: 0
 	bottom: 5px
 	text-transform: uppercase
-	
+
 .input
 	height: 40px
 	padding: 0 8px
@@ -202,13 +202,13 @@ Fbody.open
 .model__decolette,
 .model__skirt
 	text-align: center
-	
+
 .model__skirt
 	margin-top: -20px
-	
+
 .model__decolette-img
 	margin-top: 40px
-	
+
 
 
 .radiobutton
@@ -217,7 +217,7 @@ Fbody.open
 		color: $color_black
 		font-weight: normal
 		font-size: 16px
-		span 
+		span
 			display: inline-block;
 			margin-right: 10px
 			width: 16px
@@ -230,18 +230,18 @@ Fbody.open
 			position: relative
 			border-radius: 50%
 			&:hover
-				span 
+				span
 					border: 1px solid $color_yellow
 					background: $color_lightfray
 
 	input
 		display: none
 
-               
+
 		&:checked
 			& + span
 				border: 1px solid $color_yellow
-				background: $Color_White 
+				background: $Color_White
 
 				&:before
 					content: ''
@@ -251,7 +251,7 @@ Fbody.open
 					transform: translate(-50%, -50%)
 					width: 8px
 					height: 8px
-					background-color: $color_yellow 
+					background-color: $color_yellow
 					border-radius: 50%
 
-				
+

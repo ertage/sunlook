@@ -10,70 +10,70 @@
 		        type: 'straight',
 		        bgColor: '#f00',
 		        title: 'Straight',
-		        image:  '/src/images/style/straight.png'
+		        image: 'images/style/straight.png'
 		      },
 		      {
 		        type: 'slipOver',
 		        bgColor: 'blue',
 		        title: 'slipOver',
-		        image: '/src/images/style/slip-over.png'
+		        image: 'images/style/slip-over.png'
 		      },
 		      {
 		        type: 'vStyle',
 		        bgColor: 'pink',
 		        title: 'slipOver',
-		        image: '/src/images/style/vStyle.png'
+		        image: 'images/style/vStyle.png'
 		      }
 		    ];
 
 			vm.textiles = [
 				{
 					title: 'silk',
-					image: '/src/images/textile/silk.jpg'
+					image: 'images/textile/silk.jpg'
 				},
 				{
 					title: 'knitwear',
-					image: '/src/images/textile/knitwear.jpg'
+					image: 'images/textile/knitwear.jpg'
 				},
 				{
 					title: 'coton',
-					image: '/src/images/textile/coton.jpg'
+					image: 'images/textile/coton.jpg'
 				},
 				{
 					title: 'linen',
-					image: '/src/images/textile/linen.jpg'
+					image: 'images/textile/linen.jpg'
 				},
 				{
 					title: 'chiffon',
-					image: '/src/images/textile/chiffon.jpg'
+					image: 'images/textile/chiffon.jpg'
 				}
 			];
 
 			vm.decolletes = [
 				{
 		    		title: 'jewel',
-		    		imagePreview: '/src/images/decollete/jewel.png',
-		    		image: '/src/images/model/decollete_jewel_white.png'
+		    		imagePreview: 'images/decollete/jewel.png',
+		    		image: 'images/model/decollete_jewel_white.png'
 		    	},
 		    	{
 		    		title: 'scoop',
-		    		imagePreview: '/src/images/decollete/scoop.png',
-		    		image: '/src/images/model/decollete_scoop_white.png'
+		    		imagePreview: 'images/decollete/scoop.png',
+		    		image: 'images/model/decollete_scoop_white.png'
 		    	},
 		    	{
 		    		title: 'square',
-		    		imagePreview: '/src/images/decollete/square.png',
-		    		image: '/src/images/model/decollete_square_white.png'
+		    		imagePreview: 'images/decollete/square.png',
+		    		image: 'images/model/decollete_square_white.png'
 		    	},
 		    	{
 		    		title: 'v-neck',
-		    		imagePreview: '/src/images/decollete/v-neck.png',
-		    		image: '/src/images/model/decollete_v-neck_white.png'
+		    		imagePreview: 'images/decollete/v-neck.png',
+		    		image: 'images/model/decollete_v-neck_white.png'
 		    	},
 		    	{
 		    		title: 'sabrina',
-		    		imagePreview: '/src/images/decollete/sabrina.png',
-		    		image: '/src/images/model/decollete_sabrina_white.png'
+		    		imagePreview: 'images/decollete/sabrina.png',
+		    		image: 'images/model/decollete_sabrina_white.png'
 		    	}
 		    ];
 
@@ -81,50 +81,50 @@
 		    	{
 		    		styleType: 'vStyle',
 		    		title: 'pencil',
-		    		image: '/src/images/skirts/pencil.png'
+		    		image: 'images/skirts/pencil.png'
 		    	},
 		    	{
 		    		styleType: 'vStyle',
 		    		title: 'tube',
-		    		image: '/src/images/skirts/tube.png'
+		    		image: 'images/skirts/tube.png'
 		    	},
 		    	{
 		    		styleType: 'slipOver',
 		    		title: 'circle',
-		    		image: '/src/images/skirts/circle.png'
+		    		image: 'images/skirts/circle.png'
 		    	},
 		    	{
 		    		styleType: 'slipOver',
 		    		title: 'a-line',
-		    		image: '/src/images/skirts/a-line.png'
+		    		image: 'images/skirts/a-line.png'
 		    	},
 		    	{
 		    		styleType: 'slipOver',
 		    		title: 'accordion',
-		    		image: '/src/images/skirts/accordion.png'
+		    		image: 'images/skirts/accordion.png'
 		    	}
 		    ];
 
 		    vm.sleeves = [
 		    	{
 		    		title: 'bell',
-		    		image: '/src/images/sleeve/bell.png'
+		    		image: 'images/sleeve/bell.png'
 		    	},
 		    	{
 		    		title: 'tube',
-		    		image: '/src/images/sleeve/bracelet.png'
+		    		image: 'images/sleeve/bracelet.png'
 		    	},
 		    	{
 		    		title: 'circle',
-		    		image: '/src/images/sleeve/puffed.png'
+		    		image: 'images/sleeve/puffed.png'
 		    	},
 		    	{
 		    		title: 'a-line',
-		    		image: '/src/images/sleeve/roll-up.png'
+		    		image: 'images/sleeve/roll-up.png'
 		    	},
 		    	{
 		    		title: 'accordion',
-		    		image: '/src/images/sleeve/shirt.png'
+		    		image: 'images/sleeve/shirt.png'
 		    	}
 		    ];
 
@@ -132,26 +132,26 @@
 				{
 					id: 'shorter',
 					title: 'shorter',
-					imagePreview: '/src/images/skirts/shorter.png',
-					image: '/src/images/model/face_straight_skirt_shorter.png'
+					imagePreview: 'images/skirts/shorter.png',
+					image: 'images/model/face_straight_skirt_shorter.png'
 				},
 				{
 					id: 'short',
 					title: 'short',
-					imagePreview: '/src/images/skirts/short.png',
-					image: '/src/images/model/face_straight_skirt_short.png'
+					imagePreview: 'images/skirts/short.png',
+					image: 'images/model/face_straight_skirt_short.png'
 				},
 				{
 					id: 'long',
 					title: 'long',
-					imagePreview: '/src/images/skirts/long.png',
-					image: '/src/images/model/face_straight_skirt_long.png'
+					imagePreview: 'images/skirts/long.png',
+					image: 'images/model/face_straight_skirt_long.png'
 				},
 				{
 					id: 'longer',
 					title: 'longer',
-					imagePreview: '/src/images/skirts/longer.png',
-					image: '/src/images/model/face_straight_skirt_longer.png'
+					imagePreview: 'images/skirts/longer.png',
+					image: 'images/model/face_straight_skirt_longer.png'
 				}
 	    	];
 

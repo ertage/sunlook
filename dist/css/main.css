@@ -1,3 +1,23 @@
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url("../fonts/FuturaPTW01Book.eot");
+  src: url("../fonts/FuturaPTW01Book.eot") format('embedded-opentype'), url("../fonts/FuturaPTW01Book.woff2") format('woff2'), url("../fonts/FuturaPTW01Book.woff") format('woff'), url("../fonts/FuturaPTW01Book.ttf") format('truetype'), url("../fonts/FuturaPTW01Book.svg#FuturaPTW01Book") format('svg');
+}
+@font-face {
+  font-family: 'FuturaPTW01Demi';
+  src: url("../fonts/FuturaPTW01Demi.eot");
+  src: url("../fonts/FuturaPTW01Demi.eot") format('embedded-opentype'), url("../fonts/FuturaPTW01Demi.woff2") format('woff2'), url("../fonts/FuturaPTW01Demi.woff") format('woff'), url("../fonts/FuturaPTW01Demi.ttf") format('truetype'), url("../fonts/FuturaPTW01Demi.svg#FuturaPTW01Demi") format('svg');
+}
+@font-face {
+  font-family: 'FuturaLight';
+  src: url("../fonts/FuturaLight.eot");
+  src: url("../fonts/FuturaLight.eot") format('embedded-opentype'), url("../fonts/FuturaLight.woff2") format('woff2'), url("../fonts/FuturaLight.woff") format('woff'), url("../fonts/FuturaLight.ttf") format('truetype'), url("../fonts/FuturaLight.svg#FuturaLight") format('svg');
+}
+@font-face {
+  font-family: 'FuturaPTW01Medium';
+  src: url("../fonts/FuturaPTW01Medium.eot");
+  src: url("../fonts/FuturaPTW01Medium.eot") format('embedded-opentype'), url("../fonts/FuturaPTW01Medium.woff2") format('woff2'), url("../fonts/FuturaPTW01Medium.woff") format('woff'), url("../fonts/FuturaPTW01Medium.ttf") format('truetype'), url("../fonts/FuturaPTW01Medium.svg#FuturaPTW01Medium") format('svg');
+}
 .button {
   display: inline-block;
   margin-bottom: 0;
@@ -52,13 +72,13 @@ body {
   padding: 88px 56px;
 }
 .content.content_type_image {
-  background: url("../../src/images/bg1.jpg") center no-repeat;
+  background: url("/images/bg1.jpg") center no-repeat;
 }
 .content.content_type_image .block-info__text {
   color: #fff;
 }
 .content.content_type_color {
-  background: url("../../src/images/bg2.jpg") center no-repeat;
+  background: url("/images/bg2.jpg") center no-repeat;
 }
 .content.content_type_color,
 .content.content_type_image {
@@ -392,13 +412,13 @@ Fbody.open .modal-holder {
 .model-overlay {
   width: 100%;
   height: 700px;
-  background: url("../../src/images/model-bg.jpg") center no-repeat;
+  background: url("/images/model-bg.jpg") center no-repeat;
   background-size: cover;
   position: relative;
   border-bottom: 1px solid #e5e5e5;
 }
 .model {
-  background: url("../../src/images/model.png") center no-repeat;
+  background: url("/images/model.png") center no-repeat;
   height: 480px;
   width: 128px;
   position: absolute;
