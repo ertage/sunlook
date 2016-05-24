@@ -250,10 +250,10 @@ input:-ms-input-placeholder {
   display: block;
   max-width: 100%;
 }
-body.open {
+Fbody.open {
   position: fixed;
 }
-body.open .modal-holder {
+Fbody.open .modal-holder {
   display: block;
 }
 .modal-holder {
@@ -454,7 +454,6 @@ body.open .modal-holder {
 }
 .input {
   height: 40px;
-  border: 1px solid #e5e5e5;
   padding: 0 8px;
   display: block;
 }
