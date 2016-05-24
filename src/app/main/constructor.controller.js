@@ -81,27 +81,32 @@
 		    	{
 		    		styleType: 'vStyle',
 		    		title: 'pencil',
-		    		image: 'images/skirts/pencil.png'
+		    		imagePreview: 'images/skirts/pencil.png',
+		    		image: 'images/skirts/skirt_pencil_long_white.png'
 		    	},
 		    	{
 		    		styleType: 'vStyle',
 		    		title: 'tube',
-		    		image: 'images/skirts/tube.png'
+		    		imagePreview: 'images/skirts/tube.png',
+		    		image: 'images/skirts/skirt_pencil_short_white.png'
 		    	},
 		    	{
 		    		styleType: 'slipOver',
 		    		title: 'circle',
-		    		image: 'images/skirts/circle.png'
+		    		imagePreview: 'images/skirts/circle.png',
+		    		image: 'images/skirts/skirt_circle_white.png'
 		    	},
 		    	{
 		    		styleType: 'slipOver',
 		    		title: 'a-line',
-		    		image: 'images/skirts/a-line.png'
+		    		imagePreview: 'images/skirts/a-line.png',
+		    		image: 'images/skirts/skirt_a-line_white.png'
 		    	},
 		    	{
 		    		styleType: 'slipOver',
 		    		title: 'accordion',
-		    		image: 'images/skirts/accordion.png'
+		    		imagePreview: 'images/skirts/accordion.png',
+		    		image: 'images/skirts/skirt_accordion_white.png'
 		    	}
 		    ];
 
@@ -162,7 +167,7 @@
 				textile: vm.textiles[0],
 				decollete: vm.decolletes[0],
 				color: 'red',
-				skirt: vm.skirts[0],
+				skirt: vm.skirts[2],
 				sleeve: vm.sleeves[0],
 				straightType: vm.straightTypes[0],
 				size: 'XS'

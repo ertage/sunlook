@@ -35,8 +35,10 @@
           </li>
           <li class="modal__sidebar-item" ng-class="{active: vm.isActive('skirt')}"  ng-click="vm.activated('skirt')"  ng-hide="vm.model.style.type == 'straight'">Skirt
             <div class="options-board">
-              <div class="option" ng-repeat="skirt in vm.skirts | filter: {styleType: vm.model.style.type}" ng-class="{checked: vm.model.skirt.title == skirt.title}">
-                <img ng-src="{{skirt.image}}" alt="" class="option__img">
+              <div class="option" 
+              ng-repeat="skirt in vm.skirts | filter: {styleType: vm.model.style.type}" ng-class="{checked: vm.model.skirt.title == skirt.title}"
+              ng-click="vm.model.skirt = skirt">
+                <img ng-src="{{skirt.imagePreview}}" alt="" class="option__img">
               </div>
             </div>
           </li>
@@ -65,7 +67,10 @@
                 <img ng-src="{{vm.model.decollete.image}}" alt="model__decolette" class="model__decolette-img">
               </div>
               <div class="model__skirt">
-                <img ng-src="{{vm.model.straightType.image}}" alt="model__skirt" class="model__skirt-img">
+                <img ng-src="{{vm.model.straightType.image}}" ng-show="vm.model.style.type == 'straight'" alt="model__skirt" class="model__skirt-img">
+                <img ng-src="{{vm.model.skirt.image}}" ng-show="vm.model.style.type == 'slipOver'" alt="model__skirt" class="model__skirt-img">
+                <img ng-src="{{vm.model.skirt.image}}" ng-show="vm.model.style.type == 'vStyle'" alt="model__skirt" class="model__skirt-img">
+                
               </div>
               <div class="model__sleeve"></div>
             </div>

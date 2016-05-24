@@ -5,7 +5,7 @@
     .directive('gallery', function() {
       return {
         restrict: 'E',
-        templateUrl: 'src/app/gallery/gallery.tpl.html',
+        templateUrl: 'app/gallery/gallery.tpl.html',
         link: function($scope, $element) {
           var grid = $element[0].querySelector('.grid');
           var msnry;
